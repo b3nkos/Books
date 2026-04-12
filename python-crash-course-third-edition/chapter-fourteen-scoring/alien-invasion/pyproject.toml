@@ -1,0 +1,20 @@
+[project]
+name = "alien-invasion"
+version = "0.1.0"
+description = "Alien Invasion 2D Game"
+authors = [
+    {name = "Cristian Martinez",email = "cristianandres92@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pygame (>=2.6.1,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+package-mode = false
