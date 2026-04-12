@@ -1,0 +1,33 @@
+<header>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <h2>{{ settings.title }}</h2>
+      <span class="spacer"></span>
+      <div class="menu-links">
+        <button mat-button routerLink="/products">Products</button >
+        <button mat-button routerLink="/cart" [matBadge]="cartService.cart?.products?.length">My Cart</button >
+        <button mat-button routerLink="/user">My Profile</button >
+      </div>
+      <app-auth />
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
+<main class="main">
+  <div class="content">
+    <router-outlet />
+  </div>
+  @defer (on viewport) {
+    <app-featured/>
+  } @placeholder(minimum 1s) {
+    <img alt="place holder image" src="placeholder.png" />
+  } @error {
+    <span>An error occured while loading the featured product</span>
+  }
+</main>
+<footer>
+  <mat-toolbar ngSkipHydration>
+    <mat-toolbar-row>
+      <span appCopyright>- v{{ settings.version }}</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>

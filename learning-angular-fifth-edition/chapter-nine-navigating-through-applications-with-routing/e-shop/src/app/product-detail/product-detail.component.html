@@ -1,0 +1,22 @@
+@let product = (product$ | async);
+
+@if (product) {
+  <div>
+    <p>
+      You selected: <strong>{{ product.title }}</strong>
+    </p>
+
+    <p>{{ product.price | currency: 'EUR'}}</p>
+    <input type="number" placeholder="New price" #price>
+    <button class="secondary" (click)="changePrice(product, price.value)">Change</button>
+    <div class="pill-group">
+      <div class="pill">{{ product.category }}</div>
+    </div>
+    <div class="button-group">
+      @if(authService.isLoggedIn()) {
+        <button type="button" (click)="addToCart()">Add to cart</button>
+      }
+      <button class="delete" (click)="remove(product)">Delete</button>
+    </div>
+  </div>
+}
