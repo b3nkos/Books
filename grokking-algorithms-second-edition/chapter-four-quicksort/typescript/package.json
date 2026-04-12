@@ -1,0 +1,6 @@
+{
+  "name": "chapter-four-quicksort",
+  "devDependencies": {
+    "@types/bun": "latest"
+  }
+}
