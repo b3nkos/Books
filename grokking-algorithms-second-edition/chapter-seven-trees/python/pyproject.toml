@@ -1,20 +1,23 @@
 [project]
-name = "file-directories-python"
+name = "chapter-seven-tree"
 version = "0.1.0"
-description = "prints the name of every file in the pics directory, including all its subdirectories"
+description = ""
 authors = [
     {name = "Cristian Martinez",email = "cristianandres92@gmail.com"}
 ]
+readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
 ]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
 
 [dependency-groups]
 dev = [
     "pytest (>=9.0.2,<10.0.0)"
 ]
-
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
