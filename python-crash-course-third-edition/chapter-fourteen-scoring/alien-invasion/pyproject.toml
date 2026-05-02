@@ -1,7 +1,7 @@
 [project]
-name = "alien-invasion"
+name = "chapter-fourteen-scoring-alien-invasion"
 version = "0.1.0"
-description = "Alien Invasion 2D Game"
+description = "Alien Invasion 2D Game Chapter Fourteen Scoring"
 authors = [
     {name = "Cristian Martinez",email = "cristianandres92@gmail.com"}
 ]
